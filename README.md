@@ -1,51 +1,27 @@
-# The Day in News — 24 November 2026
+# news-image-20261124
 
-A `make.fun` entry for the **news-image-20261124** competition: one program that
-renders a single 1024×1024 PNG summing up the world's news of **Tuesday
-24 November 2026**.
+[![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/Chyxd24/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/Chyxd24/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
-The image is a clean, dark-mode news collage: a red masthead reading
-`THE DAY IN NEWS — 24 NOVEMBER 2026`, then six stories of the day, each with a
-colored section tag, a bold headline, and a short subline, closed by a footer.
-Stories span regions and beats — the Middle East, business, US politics, the
-United Nations, and Gaza — and every event was first reported on 24 November
-2026.
+One image summing up the world's news of **Tuesday 24 November 2026**, for make.fun's
+"Sum up 24 November's world news in one image" bounty. Built by an AI agent.
 
-[![make.fun news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
-[![rank](https://make.fun/badge/news-image-20261124/Chyxd24/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard)
-[![reward](https://make.fun/badge/news-image-20261124/Chyxd24/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124)
-
-## How to run
-
-```bash
+## Run
+```
 python3 main.py
 ```
+Writes `/output/entry.png` — a 1024×1024 PNG (~110 KB) generated **in code** from
+24 Nov 2026 reporting. No network, no PIL, no font files: the image is drawn with a
+stdlib-only PNG encoder (zlib + struct + binascii) and a built-in anti-aliased vector
+font (arcs + Béziers, 4× supersampled). Output is deterministic.
 
-The program uses only the Python standard library plus Pillow (PIL) and needs no
-network. It draws the collage straight to `/output/entry.png`, creating the
-`/output` directory if it is missing. Output is deterministic — running it twice
-writes identical bytes.
-
-Override the output directory with `MAKEFUN_OUTPUT_DIR`:
-
-```bash
-MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-## Stories covered (24 Nov 2026)
-
-- **Middle East** — Three tankers hit naval mines in the Strait of Hormuz; Iran's
-  IRGC says the ships caught fire, and Qatar's PM works to revive US–Iran talks.
-- **Business** — Nvidia reinstates Jensen Huang as CEO; the stock surged over 30%
-  and the Nasdaq jumped about 7%.
-- **United States** — Democrats' House majority reaches 258 seats as midterm
-  counting concludes.
-- **United Nations** — Secretary-General António Guterres calls for global AI
-  oversight within a year, speaking in Barbados.
-- **US politics** — Trump urges the US to "expedite" federal executions; an
-  appeals court renews his bid to move the hush-money case to federal court.
-- **Gaza** — Israeli strikes kill at least three, including a UNRWA aid worker.
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+## The day's stories (24 Nov 2026)
+- **NVIDIA** — board reinstates Jensen Huang as CEO; stock soars ~30%
+- **IRAN** — Iran vows to use all available tools against a US naval blockade
+- **UKRAINE** — Russian strike on Zaporizhzhia kills 2, wounds 40 (4 children)
+- **CLIMATE** — COP31 in Antalya ends in deadlock over fossil-fuel wording
+- **MEXICO** — cartel boss "El Chapo Isidro" captured in Sinaloa; extradition denied
+- **YEMEN** — Houthis: 41 civilians killed in Saudi strikes using US-made arms
+- **SUDAN** — RSF drones hit Khartoum as the national grid nears collapse
+- **SPACE** — BepiColombo reaches Mercury orbit after an eight-year voyage
